@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMORY GAME</title>
+    <link href='Style.css' rel='stylesheet'>
+</head>
+<body>
+    
+        <h1> MEMORY GAME </h1>
+
+        <button type='button' id='botonReset' onclick="location.reload()" class="btn">Restart</button>
+
+        <p>Cartas emparejadas: </p>
+
+        <div id="number"> </div>
+
+        <img src="Congrats.JPG" id="Congratulations" class="Congrats"> 
+      
+      <table align="center" class="tablephotos">
+          <tr>
+              <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo1"> </td>
+              <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo2"> </td>
+              <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo3"> </td>
+              <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo4"> </td>
+          </tr>
+          <tr>
+            <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo5"> </td>
+            <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo6"> </td>
+            <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo7"> </td>
+            <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo8"> </td>
+         </tr>
+         <tr>
+          <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo9"> </td>
+          <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo10"> </td>
+          <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo11"> </td>
+          <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo12"> </td>
+         </tr>
+      </table>
+                 
+        
+    <script src="Script.js"></script>
+
+</body>
+</html>
