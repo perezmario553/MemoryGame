@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEMORY GAME</title>
-    <link href='Style.css' rel='stylesheet'>
-</head>
-<body>
-    
-        <h1> MEMORY GAME </h1>
-
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>MEMORY GAME</title>
+      <link href='Style.css' rel='stylesheet'>
+  </head>
+  <body class="bg">
+  <!---
+  Todo documento de html debe tener dentro del body un header y un main, esto ayuda a los motores de búsqueda que indexan
+  a saber como leerlo para evaluar el código. Esto es muy muy importante para las empresas ya que todo el mundo quiere aparecer
+  lo mejor posicionado posible en el buscado.
+  No todo depende del código, obviamente, hay mucho trabajo de SEO/SEM que deben hacer en marketing para que google
+  considere digna tu web y la coloque en las primeras páginas PERO nosotros los devs tenemos la obligación de asegurarnos que nuestro
+  código es 'SEO Friendly' que le llaman (aquí a todos les encantan las palabrillas en inglés)
+  La semántica es primordial en HTML, debe seguir las reglas de la w3c siempre, y debe de ser accesible, ¿que ocurre si
+  un invidente quiere entrar en tu web y leerla con un asistente de voz? AH!
+  -->
+    <header>
+      <!--- El header contiene normalmente título, menu... -->
+      <h1 class="title"> MEMORY GAME </h1>
+    </header>
+  <!--- El main contiene todo el contenido que no es la cabecera... -->
+    <main>
+      <!--- Metemos el número dentro de la p como span para que quede alineado y forme parte del mismo parágrafo
+      Además lo dejamos inicializado a 0, así para el usuario no será tan raro no ver nada y empezar a ver -->
+      <p class="sub">Cartas emparejadas: <span id="number">0</span></p>
+      <!-- Parte de la accesibilidad y del SEO es indicar el nombre de las fotos siempre con el alt -->
+      <img src="congrats.JPG" id="congratulations" class="congrats" alt="congrats">
+      <!-- Me ha encantado ver tablas, creo que no las veia desde 2010 ajajajajaj ya no se usan, solo en las newsletters como mucho
+      Ahora se trabaja con grids, verás que te ahorras un montón de parafernalia
+      -->
+      <div class="table-photos">
+        <img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo1" alt="photo1"/>
+        <img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo2" alt="photo2"/>
+        <img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo3" alt="photo3"/>
+        <img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo4" alt="photo4"/>
+        <img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo5" alt="photo5"/>
+        <img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo6" alt="photo6"/>
+        <img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo7" alt="photo7"/>
+        <img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo8" alt="photo8"/>
+        <img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo9" alt="photo9"/>
+        <img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo10" alt="photo10"/>
+        <img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo11" alt="photo11"/>
+        <img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo12" alt="photo12"/>
+      </div>
+      <footer>
         <button type='button' id='botonReset' onclick="location.reload()" class="btn">Restart</button>
-
-        <p>Cartas emparejadas: </p>
-
-        <div id="number"> </div>
-
-        <img src="Congrats.JPG" id="Congratulations" class="Congrats"> 
-      
-      <table align="center" class="tablephotos">
-          <tr>
-              <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo1"> </td>
-              <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo2"> </td>
-              <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo3"> </td>
-              <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo4"> </td>
-          </tr>
-          <tr>
-            <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo5"> </td>
-            <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo6"> </td>
-            <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo7"> </td>
-            <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo8"> </td>
-         </tr>
-         <tr>
-          <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo9"> </td>
-          <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo10"> </td>
-          <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo11"> </td>
-          <td><img src="photo13.JPG" onclick="Turn(this.id)" class="question" id="photo12"> </td>
-         </tr>
-      </table>
-                 
-        
+      </footer>
+    </main>
     <script src="Script.js"></script>
-
-</body>
+  </body>
 </html>

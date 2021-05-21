@@ -1,9 +1,11 @@
-
-body{
-background: #7992c0;
+.bg {
+    background: #7992c0;
 }
-
-h1{
+/* No se debe dar estilos nunca a etiquetas nativas, como h1, p, span, porque se va a heredar a tooooooda la web, imagina que tienes
+10 páginas y en una el titulo principal quieres por SEO que sea el subtitulo h2 y en otra el h1, si lo seteas por etiqueta te
+estás autotroleando siempre.
+ */
+.title {
     text-align: center; 
     color: white !important;
     font-style: italic;
@@ -11,13 +13,13 @@ h1{
     font-size: 50px;
 }
 
-p{
+.sub {
     color: white; 
-    font-size:20px;
+    font-size: 20px;
     top: 100px;
 }
 
-.btn{
+.btn {
     text-transform: uppercase;
     position:fixed;
     bottom: 40px; 
@@ -27,38 +29,37 @@ p{
     font-size: 25px; 
 }
 
-.btn1{
-    text-transform: uppercase;
-    position:fixed;
-    bottom: 80px; 
-    right: 40px; 
-    border-radius: 5px; 
-    font-weight: bold; 
-    font-size: 25px; 
-}
-
+/* No se debe dar estilos a id's, son identificadores destinados a otras cosas, aunque se puede, y lo enseñan así en clases
+ básicas, es una mala práctica, deben ser agnosticos a cualquier estilo, para ello siempre añadir clases mejor */
 #number{
-    font-size: 20px; 
-    color: white; 
-    position: fixed; 
+    font-size: 20px;
+    color: white;
+    /* position: fixed;   ¿Porqué está fijo? */
     left: 180px;
     top: 125px;
 }
 
 .question{
-    width: 150px;
+    /*background-image: url(./img/questionmark.jpg);  No existe, se te habrá colao */
+    bottom: 50px;
     height: 150px;
-   background-image: url(img/questionmark.jpg) repeat-x;
-   bottom:50px;
-   
 }
 
-img{
+img {
     display: block;
-    margin:auto;
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
 }
 
-.tablephotos{
-    border-collapse: separate;
-    border-spacing: 10px 5px;
+.table-photos {
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template: ". . . .";
+    grid-gap: 12px;
+}
+
+.congrats {
+    display: none;
 }
